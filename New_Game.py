@@ -51,7 +51,7 @@ for t in range(0, int(t_run/t_step)):
     plt.scatter(x1, y1, s=50, marker="o")
     plt.ylim(0, 1)
     plt.xlim(0, 1)
-    plt.show(block=False)
+    plt.show()
     plt.pause(t_step)
     # time.sleep(t_step)
     plt.close()
