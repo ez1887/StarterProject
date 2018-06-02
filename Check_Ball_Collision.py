@@ -14,6 +14,7 @@ def check_ball_collision(ball_one, ball_two):
 def update_ball_collision(ball_one, ball_two):
     mass_one = ball_one.density * (4/3) * np.pi * ball_one.radius**3
     mass_two = ball_two.density * (4/3) * np.pi * ball_two.radius**3
+    
     v1fx = (((mass_one - mass_two)/(mass_one + mass_two)) * ball_one.vx + 
         (2*mass_two*ball_two.vx)/(mass_one + mass_two))
     v1fy = (((mass_one - mass_two)/(mass_one + mass_two)) * ball_one.vy + 
@@ -22,6 +23,7 @@ def update_ball_collision(ball_one, ball_two):
         (mass_two - mass_one)/(mass_one + mass_two) * ball_two.vx)
     v2fy = (((2 * mass_one)/(mass_one + mass_two)) * ball_one.vy + 
         (mass_two - mass_one)/(mass_one + mass_two) * ball_two.vy)
+    
     ball_one.vx = v1fx
     ball_one.vy = v1fy
     ball_two.vx = v2fx
