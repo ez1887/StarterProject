@@ -18,7 +18,7 @@ wall_y_low = 0
 wall_y_high = 1
 wallpos = [wall_x_low, wall_x_high, wall_y_low, wall_y_high]
 max_vel = 0.5
-t_run = 10
+t_run = 5
 t_step = 0.01   
 
 #Create all Ball objects with random positions and velocities
@@ -48,7 +48,7 @@ for t in range(0, int(t_run/t_step)):
         x1.append(ball_list[i].x)
         y1.append(ball_list[i].y)
     print("x = " + str(ball_list[0].x) + " y = " + str(ball_list[0].y) + " vx = " + str(ball_list[0].vx) + " vy = " + str(ball_list[0].vy))
-    plt.scatter(x1, y1, marker="o")
+    plt.scatter(x1, y1, s=50, marker="o")
     plt.ylim(0, 1)
     plt.xlim(0, 1)
     plt.show(block=False)
