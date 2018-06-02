@@ -21,5 +21,5 @@ def update_wall_collision(ball, wallnum):
     if (wallnum == 0 or wallnum == 1):
         ball.vx = -ball.vx
     elif (wallnum == 2 or wallnum == 3):
-        ball.vy = -ball.vymax_vel
+        ball.vy = -ball.vy
     return [ball.vx, ball.vy]

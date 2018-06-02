@@ -6,5 +6,5 @@ class Ball():
         self.y = y
         self.vx = vx
         self.vy = vy
-        self.radius = 1
+        self.radius = 0.01
         self.density = 1
