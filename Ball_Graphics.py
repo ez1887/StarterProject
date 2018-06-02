@@ -43,8 +43,8 @@ for t in range(0, int(t_run/t_step)):
                 [ball_list[i].vx, ball_list[i].vy, ball_list[j].vx, ball_list[j].vy] = update_ball_collision(ball_list[i], ball_list[j])
     for i in range(numBalls):
         [ball_list[i].x, ball_list[i].y] = position_change(ball_list[i], t_step)
-        x1.append(ball_list[i].x)
-        y1.append(ball_list[i].y)
+        x.append(ball_list[i].x)
+        y.append(ball_list[i].y)
     print("x = " + str(ball_list[0].x) + " y = " + str(ball_list[0].y) + " vx = " + str(ball_list[0].vx) + " vy = " + str(ball_list[0].vy))
     
     ## THIS IS THE SECTION TO CHANGE - GETTING X AND Y WORKS YAY 
