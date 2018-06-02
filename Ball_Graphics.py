@@ -10,6 +10,7 @@ from Check_Ball_Collision import update_ball_collision
 from Check_Wall_Collision import check_wall_collision
 from Check_Wall_Collision import update_wall_collision
 from Position_Change import position_change
+from turtle import *
 
 #get input variables
 numBalls = int(input('Enter the number of balls: '))
@@ -48,11 +49,17 @@ for t in range(0, int(t_run/t_step)):
     print("x = " + str(ball_list[0].x) + " y = " + str(ball_list[0].y) + " vx = " + str(ball_list[0].vx) + " vy = " + str(ball_list[0].vy))
     
     ## THIS IS THE SECTION TO CHANGE - GETTING X AND Y WORKS YAY 
-    plt.scatter(x, y, marker="o")
-    plt.ylim(0, 1)
-    plt.xlim(0, 1)
-    plt.show(block=False)
-    plt.pause(t_step)
+    #plt.scatter(x, y, marker="o")
+    #plt.ylim(0, 1)
+    #plt.xlim(0, 1)
+    #plt.show(block=False)
+    #plt.pause(t_step)
     # time.sleep(t_step)
-    plt.close()
+    #plt.close()
+    
+    for i in range(numBalls):
+        turtle.setposition(x[i], y[i])
+        turtle.circle(ball_list[i].radius)
+    turtle.delay(t_step*1000)            #time delay in miliseconds
+    turtle.clear()                       #should clear screen
 
