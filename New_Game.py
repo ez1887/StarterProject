@@ -25,12 +25,8 @@ t_step = 0.01
 ball_list = []
 for i in range(numBalls):
     ball_list.append(Ball(np.random.uniform(wall_x_low, wall_x_high), np.random.uniform(wall_y_low, wall_y_high), np.random.uniform(-max_vel, max_vel), np.random.uniform(-max_vel, max_vel)))
-    print(ball_list[i].x)
-    print(ball_list[i].y)
-
 
 #Iterate through time
-
 
 for t in range(0, int(t_run/t_step)):
     x1 = []
@@ -51,9 +47,9 @@ for t in range(0, int(t_run/t_step)):
     plt.scatter(x1, y1, s=50, marker="o")
     plt.ylim(0, 1)
     plt.xlim(0, 1)
-    plt.show()
+    plt.show(block = False)
     plt.pause(t_step)
     # time.sleep(t_step)
-    plt.close()
+    plt.clf()
 # plt.plot(x2, y2)
 # plt.plot(x3, y3)
