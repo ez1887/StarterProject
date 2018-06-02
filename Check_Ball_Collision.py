@@ -23,8 +23,4 @@ def update_ball_collision(ball_one, ball_two):
         (mass_two - mass_one)/(mass_one + mass_two) * ball_two.vx)
     v2fy = (((2 * mass_one)/(mass_one + mass_two)) * ball_one.vy + 
         (mass_two - mass_one)/(mass_one + mass_two) * ball_two.vy)
-    
-    ball_one.vx = v1fx
-    ball_one.vy = v1fy
-    ball_two.vx = v2fx
-    ball_two.vy = v2fy
+    return [v1fx, v1fy, v2fx, v2fy]
