@@ -44,7 +44,7 @@ for t in range(0, int(t_run/t_step)):
         [ball_list[i].x, ball_list[i].y] = position_change(ball_list[i], t_step)
         x1.append(ball_list[i].x)
         y1.append(ball_list[i].y)
-        radius.append(ball_list[i].radius * 3000)
+        radius.append(ball_list[i].radius * 2500)
     print("x = " + str(ball_list[0].x) + " y = " + str(ball_list[0].y) + " vx = " + str(ball_list[0].vx) + " vy = " + str(ball_list[0].vy))
     plt.scatter(x1, y1, s=radius, marker="o")
     plt.ylim(0, 1)
