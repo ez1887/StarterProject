@@ -13,6 +13,8 @@ def check_wall_collision(ball, wallpos):
         return 2
     elif ((ball.y + ball.radius) > wallpos[3]):
         return 3
+    else:
+        return -1
 
 def update_wall_collision(ball, wallnum):
 #collision occurs with left wall if 0, right wall if 1, bottom wall if 2, top wall if 3
