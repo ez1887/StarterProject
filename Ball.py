@@ -8,4 +8,3 @@ class Ball():
         self.vy = vy
         self.radius = 1
         self.density = 1
-    
