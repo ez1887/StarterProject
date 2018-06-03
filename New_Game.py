@@ -24,7 +24,8 @@ t_step = 0.01
 #Create all Ball objects with random positions and velocities
 ball_list = []
 for i in range(numBalls):
-    ball_list.append(Ball(np.random.uniform(wall_x_low, wall_x_high), np.random.uniform(wall_y_low, wall_y_high), np.random.uniform(-max_vel, max_vel), np.random.uniform(-max_vel, max_vel)))
+    ball_list.append(Ball(np.random.uniform(wall_x_low, wall_x_high), np.random.uniform(wall_y_low, wall_y_high), 
+        np.random.uniform(-max_vel, max_vel), np.random.uniform(-max_vel, max_vel), np.random.uniform(0.01, 0.05)))
 
 #Iterate through time
 
@@ -44,7 +45,7 @@ for t in range(0, int(t_run/t_step)):
         [ball_list[i].x, ball_list[i].y] = position_change(ball_list[i], t_step)
         x1.append(ball_list[i].x)
         y1.append(ball_list[i].y)
-        radius.append(ball_list[i].radius * 2500)
+        radius.append(ball_list[i].radius * 2000)
     print("x = " + str(ball_list[0].x) + " y = " + str(ball_list[0].y) + " vx = " + str(ball_list[0].vx) + " vy = " + str(ball_list[0].vy))
     plt.scatter(x1, y1, s=radius, marker="o")
     plt.ylim(0, 1)

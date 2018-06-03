@@ -18,8 +18,16 @@ def check_wall_collision(ball, wallpos):
 
 def update_wall_collision(ball, wallnum):
 #collision occurs with left wall if 0, right wall if 1, bottom wall if 2, top wall if 3
-    if (wallnum == 0 or wallnum == 1):
-        ball.vx = -ball.vx
-    elif (wallnum == 2 or wallnum == 3):
-        ball.vy = -ball.vy
+    if (wallnum == 0):
+        if(ball.vx < 0):
+            ball.vx = -ball.vx
+    elif(wallnum == 1):
+        if(ball.vx > 0):
+            ball.vx = -ball.vx
+    elif(wallnum == 2):
+        if(ball.vy < 0):
+             ball.vy = -ball.vy
+    elif(wallnum == 3):
+        if(ball.vy > 0):
+            ball.vy = -ball.vy
     return [ball.vx, ball.vy]
